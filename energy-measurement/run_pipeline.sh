@@ -25,8 +25,9 @@ ENERGY_BASELINE_GATE="${ENERGY_BASELINE_GATE:-on}"
 # rounded up (see the pre-registration); the real cost is the ceiling plus the 30 s
 # of -k. Non-default values are for declared diagnostic sessions only and are
 # recorded in the sidecar.
+# Addendum 2026-10-04: ceilings recomputed by the single ceiling rule, the larger of 1.5 times and 15 s above the largest known wall of the stage (rehearsal, local test, validations, HEAD runs of the same cut).
 STAGE_TIMEOUT_BUILD_DEFAULT=105
-STAGE_TIMEOUT_TEST_DEFAULT=391
+STAGE_TIMEOUT_TEST_DEFAULT=424
 ENERGY_STAGE_TIMEOUT_BUILD_S="${ENERGY_STAGE_TIMEOUT_BUILD_S:-$STAGE_TIMEOUT_BUILD_DEFAULT}"
 ENERGY_STAGE_TIMEOUT_TEST_S="${ENERGY_STAGE_TIMEOUT_TEST_S:-$STAGE_TIMEOUT_TEST_DEFAULT}"
 STAGE_TIMEOUT_EXIT=91
